@@ -31,29 +31,33 @@ const instructionsLine = document.getElementById('instructions');
 const resetButton = document.getElementById('reset-button');
 const formBox = document.getElementById('form-box');
 const storyBox = document.getElementById('results-container');
+const body = document.getElementById('body');
 
 // Get button
 const submitButton = document.getElementById('submit-button');
 
 
 // Add event listener to button that runs above function when button is clicked
-submitButton.addEventListener('on-click', () => {
+submitButton.addEventListener('click', () => {
     // Populate spans with input values
     adj1Span.textContent = adj1Input.value;
     name1Span.textContent = name1Input.value;
     noun1Span.textContent = noun1Input.value;
     noun2Span.textContent = noun2Input.value;
     noun3Span.textContent = noun3Input.value;
-    saying1Span.content = saying1Input.value;
+    saying1Span.textContent = saying1Input.value;
     noun4Span.textContent = noun4Input.value;
     verb1Span.textContent = verb1Input.value;
     name2Span.textContent = name2Input.value;  
 
     // Change visibility of buttons and boxes
-    instructionsLine.display = "none";
+    instructionsLine.style.display = "none";
     resetButton.style.display = "block";   
     storyBox.style.display = "block";
     formBox.style.display = "none";
+
+    // Change background
+    body.style.backgroundImage = 'url("./img/princess-rainicorn-banner.png")';
 })
 
 // Add event listener to button that runs above function when button is clicked
@@ -63,6 +67,9 @@ resetButton.addEventListener('click', () => {
     formBox.style.display = "block";
     storyBox.style.display = "none";
     resetButton.style.display = "none";
+
+    // clear background
+    body.style.backgroundImage = "";
 
     // clear input values
     adj1Input.value = "";

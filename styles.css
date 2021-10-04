@@ -21,7 +21,7 @@ h2 {
     font-weight: lighter;
 }
 
-#reset {
+#reset-button {
     display: none;
     margin-bottom: 20px;
 }
@@ -70,14 +70,13 @@ button {
 
 }
 
-#results-box {
+#results-container {
     display: none;
     color: darkslategrey;
     font-family: cursive;
     font-size: 1.75rem;
     width: 55%;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 }
 
 #beginning, #end, span {
